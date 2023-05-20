@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="550.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReadController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="438.0" prefWidth="772.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label layoutX="437.0" layoutY="25.0" text="READ">
+               <font>
+                  <Font name="Inter Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="347.0" layoutY="483.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="34.0" prefWidth="236.0" text="Voltar">
+               <font>
+                  <Font name="Inter Regular" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtRa" layoutX="113.0" layoutY="109.0" prefHeight="30.0" prefWidth="70.0" promptText="Ra">
+               <font>
+                  <Font name="Inter Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutX="193.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnBuscarAction" prefHeight="30.0" text="Buscar">
+               <font>
+                  <Font name="Inter Regular" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="112.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+               <font>
+                  <Font name="Inter Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="labelNome" layoutX="112.0" layoutY="200.0" textFill="#000e4b">
+               <font>
+                  <Font name="Inter Regular" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Label>
+            <Text layoutX="112.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+               <font>
+                  <Font name="Inter Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="labelTelefone" layoutX="112.0" layoutY="247.0" textFill="#000e4b">
+               <font>
+                  <Font name="Inter Regular" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Label>
+            <Text layoutX="112.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+               <font>
+                  <Font name="Inter Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="labelEmail" layoutX="112.0" layoutY="299.0" textFill="#000e4b">
+               <font>
+                  <Font name="Inter Regular" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Label>
+            <Text layoutX="112.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curso:">
+               <font>
+                  <Font name="Inter Bold" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="labelCurso" layoutX="112.0" layoutY="346.0" textFill="#000e4b">
+               <font>
+                  <Font name="Inter Regular" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </Label>
+            <ScrollPane layoutX="467.0" layoutY="184.0" prefHeight="184.0" prefWidth="350.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="308.0" prefWidth="334.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cep:">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="labelCep" layoutX="14.0" layoutY="32.0" textFill="#000e4b">
+                           <font>
+                              <Font name="Inter Regular" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                        <Text layoutX="14.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logradouro:">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="labelLogradouro" layoutX="14.0" layoutY="74.0" textFill="#000e4b">
+                           <font>
+                              <Font name="Inter Regular" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                        <Text layoutX="14.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="labelBairro" layoutX="14.0" layoutY="115.0" textFill="#000e4b">
+                           <font>
+                              <Font name="Inter Regular" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                        <Text layoutX="14.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número:">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="labelNumeroEndereco" layoutX="14.0" layoutY="156.0" textFill="#000e4b">
+                           <font>
+                              <Font name="Inter Regular" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                        <Text layoutX="14.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento:">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="txtComplemento" editable="false" layoutX="15.0" layoutY="203.0" prefHeight="52.0" prefWidth="306.0" wrapText="true">
+                           <font>
+                              <Font name="Inter Regular" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </TextArea>
+                        <Text layoutX="14.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade:">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="labelCidade" layoutX="14.0" layoutY="281.0" textFill="#000e4b">
+                           <font>
+                              <Font name="Inter Regular" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                        <Text layoutX="244.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uf:">
+                           <font>
+                              <Font name="Inter Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="labelUf" layoutX="244.0" layoutY="281.0" textFill="#000e4b">
+                           <font>
+                              <Font name="Inter Regular" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
