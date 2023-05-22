@@ -21,12 +21,12 @@
             <Font name="Inter Regular" size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="txtRa" layoutX="129.0" layoutY="109.0" prefHeight="30.0" prefWidth="70.0" promptText="Ra">
+      <TextField fx:id="txtRa" layoutX="113.0" layoutY="109.0" prefHeight="30.0" prefWidth="70.0" promptText="Ra">
          <font>
             <Font name="Inter Bold" size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="210.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnBuscarAction" prefHeight="30.0" text="Buscar">
+      <Button layoutX="194.0" layoutY="109.0" mnemonicParsing="false" onAction="#btnBuscarAction" prefHeight="30.0" text="Buscar">
          <font>
             <Font name="Inter Regular" size="14.0" />
          </font>
@@ -36,37 +36,37 @@
             <Font name="Inter Regular" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="128.0" layoutY="178.0" text="Nome:">
+      <Label layoutX="113.0" layoutY="169.0" text="Nome:">
          <font>
             <Font name="Inter Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNome" layoutX="128.0" layoutY="199.0" prefWidth="245.0" promptText="nome">
+      <TextField fx:id="txtNome" layoutX="113.0" layoutY="190.0" prefWidth="275.0" promptText="nome">
          <font>
             <Font name="Inter Regular" size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="128.0" layoutY="238.0" text="Telefone:">
+      <Label layoutX="113.0" layoutY="229.0" text="Telefone:">
          <font>
             <Font name="Inter Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtTelefone" layoutX="128.0" layoutY="259.0" prefWidth="245.0" promptText="telefone">
+      <TextField fx:id="txtTelefone" layoutX="113.0" layoutY="250.0" prefWidth="275.0" promptText="telefone">
          <font>
             <Font name="Inter Regular" size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="128.0" layoutY="298.0" text="E-mail:">
+      <Label layoutX="113.0" layoutY="289.0" text="E-mail:">
          <font>
             <Font name="Inter Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="128.0" layoutY="319.0" prefWidth="245.0" promptText="e-mail">
+      <TextField fx:id="txtEmail" layoutX="113.0" layoutY="310.0" prefWidth="275.0" promptText="e-mail">
          <font>
             <Font name="Inter Regular" size="14.0" />
          </font>
       </TextField>
-      <ScrollPane layoutX="445.0" layoutY="182.0" prefHeight="223.0" prefWidth="366.0">
+      <ScrollPane layoutX="451.0" layoutY="173.0" prefHeight="223.0" prefWidth="366.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="350.0">
                <children>
@@ -75,7 +75,7 @@
                         <Font name="Inter Bold" size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtCep" layoutX="20.0" layoutY="26.0" prefWidth="245.0" promptText="cep">
+                  <TextField fx:id="txtCep" layoutX="20.0" layoutY="26.0" prefWidth="275.0" promptText="cep">
                      <font>
                         <Font name="Inter Regular" size="14.0" />
                      </font>
@@ -105,7 +105,7 @@
                         <Font name="Inter Bold" size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtNumerEndereco" layoutX="20.0" layoutY="185.0" prefWidth="245.0" promptText="Número do Endereço">
+                  <TextField fx:id="txtNumeroEndereco" layoutX="20.0" layoutY="185.0" prefWidth="275.0" promptText="Número do Endereço">
                      <font>
                         <Font name="Inter Regular" size="14.0" />
                      </font>
@@ -115,7 +115,7 @@
                         <Font name="Inter Bold" size="16.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="txtComplemento" layoutX="20.0" layoutY="251.0" prefHeight="60.0" prefWidth="245.0" promptText="Complemento" wrapText="true">
+                  <TextArea fx:id="txtComplemento" layoutX="20.0" layoutY="251.0" prefHeight="60.0" prefWidth="275.0" promptText="Complemento" wrapText="true">
                      <font>
                         <Font name="Inter Regular" size="14.0" />
                      </font>
@@ -129,8 +129,8 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <ComboBox fx:id="cbxCurso" layoutX="128.0" layoutY="380.0" prefWidth="245.0" promptText="Curso" visibleRowCount="3" />
-      <Label layoutX="128.0" layoutY="358.0" text="Curso:">
+      <ComboBox fx:id="cbxCurso" layoutX="113.0" layoutY="371.0" prefWidth="278.0" promptText="Curso" visibleRowCount="3" />
+      <Label layoutX="113.0" layoutY="349.0" text="Curso:">
          <font>
             <Font name="Inter Bold" size="16.0" />
          </font>

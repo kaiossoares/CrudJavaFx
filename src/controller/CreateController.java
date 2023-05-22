@@ -37,7 +37,6 @@ public class CreateController {
             }
         });        
         
-
         txtTelefone.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*")) {
                 txtTelefone.setText(newValue.replaceAll("[^\\d]", ""));
@@ -146,7 +145,7 @@ public class CreateController {
     }
 
     public void validaCep(String Cep) throws Exception {
-        if (txtCep.getText().length() != 8) {
+        if (Cep.length() != 8) {
             throw new Exception("Informe um Cep válido que contenha apenas 8 caracteres.");
         }
 

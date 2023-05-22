@@ -111,4 +111,14 @@ public class Aluno implements Cloneable {
         Aluno clone = (Aluno) super.clone();
         return clone;
     }
+
+    @Override
+    public String toString() {
+        return "Aluno [Ra=" + Ra + ", Nome=" + Nome + ", CursoId=" + CursoId + ", Telefone=" + Telefone + ", Email="
+                + Email
+                + ", Cep=" + Cep + ", NumeroEndereco=" + NumeroEndereco + ", Complemento_Endereco="
+                + Complemento_Endereco
+                + "]";
+    }
+
 }
