@@ -20,7 +20,7 @@ public class ViaCepService {
             if (conexao.getResponseCode() != codigoSucesso)
                 throw new RuntimeException("HTTP error code: " + conexao.getResponseCode());
 
-            BufferedReader resposta = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
+            BufferedReader resposta = new BufferedReader(new InputStreamReader(conexao.getInputStream(), "UTF-8"));
             String jsonEmString = Util.converteJsonEmString(resposta);
 
             Gson gson = new Gson();

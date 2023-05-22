@@ -32,10 +32,11 @@ public class CreateController {
         });
 
         txtNome.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (!newValue.matches("[a-zA-Z ]*")) {
+            if (!newValue.matches("[\\p{L} ]*")) {
                 txtNome.setText(oldValue);
             }
-        });
+        });        
+        
 
         txtTelefone.textProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue.matches("\\d*")) {

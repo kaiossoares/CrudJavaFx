@@ -56,6 +56,15 @@ public class ViaCepResponse {
         return uf;
     }
 
+    public ViaCepResponse (String cep, String logradouro, String complemento, String bairro, String localidade, String uf){
+        this.setCep(cep);
+        this.setLogradouro(logradouro);
+        this.setComplemento(complemento);
+        this.setBairro(bairro);
+        this.setCidade(localidade);
+        this.setUf(uf);
+    }
+
     @Override
     public String toString() {
         return "Endereco{" + "cep=" + cep + ", logradouro=" + logradouro + ", bairro=" + bairro +
