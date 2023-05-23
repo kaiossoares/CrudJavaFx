@@ -92,7 +92,6 @@ public class UpdateController {
     ArrayList<Integer> idCurso = new ArrayList<Integer>();
 
     public void preencherComboBox(ComboBox<String> comboBox) {
-        idCurso.clear();
         comboBox.getItems().clear();
         try {
             MeuResultSet resultado = Cursos.listarCurso();
@@ -144,6 +143,13 @@ public class UpdateController {
             labelCidadeUf.setText(endereco.getCidade() + ", " + endereco.getUf());
 
             selecionarCursoPorRA(Ra);
+
+            txtNome.setEditable(true);
+            txtTelefone.setEditable(true);
+            txtEmail.setEditable(true);
+            txtCep.setEditable(true);
+            txtNumeroEndereco.setEditable(true);
+            txtComplemento.setEditable(true);
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erro");
@@ -210,6 +216,7 @@ public class UpdateController {
             txtNumeroEndereco.clear();
             txtComplemento.clear();
             cbxCurso.getSelectionModel().clearSelection();
+            cbxCurso.setPromptText("Curso");
         } catch (IndexOutOfBoundsException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erro");

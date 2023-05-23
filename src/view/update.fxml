@@ -41,7 +41,7 @@
             <Font name="Inter Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNome" layoutX="113.0" layoutY="190.0" prefWidth="275.0" promptText="nome">
+      <TextField fx:id="txtNome" editable="false" layoutX="113.0" layoutY="190.0" prefWidth="275.0" promptText="nome">
          <font>
             <Font name="Inter Regular" size="14.0" />
          </font>
@@ -51,7 +51,7 @@
             <Font name="Inter Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtTelefone" layoutX="113.0" layoutY="250.0" prefWidth="275.0" promptText="telefone">
+      <TextField fx:id="txtTelefone" editable="false" layoutX="113.0" layoutY="250.0" prefWidth="275.0" promptText="telefone">
          <font>
             <Font name="Inter Regular" size="14.0" />
          </font>
@@ -61,7 +61,7 @@
             <Font name="Inter Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="113.0" layoutY="310.0" prefWidth="275.0" promptText="e-mail">
+      <TextField fx:id="txtEmail" editable="false" layoutX="113.0" layoutY="310.0" prefWidth="275.0" promptText="e-mail">
          <font>
             <Font name="Inter Regular" size="14.0" />
          </font>
@@ -75,7 +75,7 @@
                         <Font name="Inter Bold" size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtCep" layoutX="20.0" layoutY="26.0" prefWidth="275.0" promptText="cep">
+                  <TextField fx:id="txtCep" editable="false" layoutX="20.0" layoutY="26.0" prefWidth="275.0" promptText="cep">
                      <font>
                         <Font name="Inter Regular" size="14.0" />
                      </font>
@@ -105,7 +105,7 @@
                         <Font name="Inter Bold" size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtNumeroEndereco" layoutX="20.0" layoutY="185.0" prefWidth="275.0" promptText="Número do Endereço">
+                  <TextField fx:id="txtNumeroEndereco" editable="false" layoutX="20.0" layoutY="185.0" prefWidth="275.0" promptText="Número do Endereço">
                      <font>
                         <Font name="Inter Regular" size="14.0" />
                      </font>
@@ -115,7 +115,7 @@
                         <Font name="Inter Bold" size="16.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="txtComplemento" layoutX="20.0" layoutY="251.0" prefHeight="60.0" prefWidth="275.0" promptText="Complemento" wrapText="true">
+                  <TextArea fx:id="txtComplemento" editable="false" layoutX="20.0" layoutY="251.0" prefHeight="60.0" prefWidth="275.0" promptText="Complemento" wrapText="true">
                      <font>
                         <Font name="Inter Regular" size="14.0" />
                      </font>
