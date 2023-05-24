@@ -167,6 +167,12 @@ public class UpdateController {
 
     public void salvarAlteracao() throws Exception {
         try {
+            String raText = txtRa.getText();
+
+            if (raText.isEmpty() || raText.length() != 5) {
+                throw new Exception("Informe um Ra que contenha apenas 5 caracteres.");
+            }
+
             CreateController createcontroller = new CreateController();
 
             String Telefone = txtTelefone.getText();
@@ -217,6 +223,9 @@ public class UpdateController {
             txtComplemento.clear();
             cbxCurso.getSelectionModel().clearSelection();
             cbxCurso.setPromptText("Curso");
+            labelLogradouro.setText("");
+            labelBairro.setText("");
+            labelCidadeUf.setText("");
         } catch (IndexOutOfBoundsException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Erro");

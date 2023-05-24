@@ -51,6 +51,18 @@ public class ReadController {
 
     @FXML
     public void switchToHome(ActionEvent event) throws IOException {
+        txtRa.clear();
+        labelNome.setText("");
+        labelTelefone.setText("");
+        labelEmail.setText("");
+        labelCurso.setText("");
+        labelCep.setText("");
+        labelLogradouro.setText("");
+        labelBairro.setText("");
+        labelCidade.setText("");
+        labelUf.setText("");
+        labelNumeroEndereco.setText("");
+        txtComplemento.clear();
         App.changeScreen("home");
     }
 
@@ -114,7 +126,7 @@ public class ReadController {
 
             labelLogradouro.setText(endereco.getLogradouro());
             labelBairro.setText(endereco.getBairro());
-            txtComplemento.setText(aluno.getComplemento() + endereco.getComplemento());
+            txtComplemento.setText(aluno.getComplemento() +" "+ endereco.getComplemento());
             labelCidade.setText(endereco.getCidade());
             labelUf.setText(endereco.getUf());
 

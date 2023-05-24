@@ -217,6 +217,7 @@ public class CreateController {
             txtCep.clear();
             txtNumeroEndereco.clear();
             txtComplemento.clear();
+            cbxCurso.getSelectionModel().clearSelection();
 
         } catch (IndexOutOfBoundsException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);

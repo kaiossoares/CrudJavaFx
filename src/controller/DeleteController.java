@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import bd.core.MeuResultSet;
 import bd.daos.Alunos;
@@ -11,6 +12,9 @@ import bd.dbos.Aluno;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -35,6 +39,8 @@ public class DeleteController {
 
     public void initialize() {
         preencherComboBox(cbxCurso);
+
+        tableAluno.setPlaceholder(null);
 
         colRa.setCellValueFactory(new PropertyValueFactory<>("ra"));
 
@@ -85,7 +91,7 @@ public class DeleteController {
         if (cursoSelecionado != null) {
             int cursoId = idCurso.get(cbxCurso.getSelectionModel().getSelectedIndex());
             ArrayList<Aluno> alunos = obterAlunosDoBancoDeDados(cursoId);
-    
+
             tableAluno.setItems(FXCollections.observableArrayList(alunos));
         }
     }
@@ -108,6 +114,42 @@ public class DeleteController {
 
     @FXML
     void btnExcluirAction(ActionEvent event) {
+        Aluno alunoSelecionado = tableAluno.getSelectionModel().getSelectedItem();
 
+        if (alunoSelecionado == null) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Nenhum aluno selecionado!");
+            alert.setContentText("Selecione um aluno na tabela para excluir.");
+            alert.showAndWait();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Atenção!");
+            alert.setHeaderText("Excluir Aluno");
+            alert.setContentText("Tem certeza que deseja excluir o aluno selecionado?");
+
+            ButtonType btnSim = new ButtonType("Sim");
+            ButtonType btnNao = new ButtonType("Não", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(btnSim, btnNao);
+
+            Optional<ButtonType> resultado = alert.showAndWait();
+
+            if (resultado.isPresent() && resultado.get() == btnSim) {
+                try {
+                    int ra = alunoSelecionado.getRa();
+                    Alunos.excluirAluno(ra);
+
+                    tableAluno.getItems().remove(alunoSelecionado);
+
+                    Alert sucesso = new Alert(Alert.AlertType.INFORMATION);
+                    sucesso.setTitle("Sucesso");
+                    sucesso.setHeaderText(null);
+                    sucesso.setContentText("Aluno excluído com sucesso.");
+                    sucesso.showAndWait();
+                } catch (Exception e) {
+                    // Trate as exceções adequadamente (exibindo uma mensagem de erro, por exemplo)
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }
