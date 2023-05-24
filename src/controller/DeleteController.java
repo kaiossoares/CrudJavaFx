@@ -16,6 +16,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -40,8 +41,6 @@ public class DeleteController {
     public void initialize() {
         preencherComboBox(cbxCurso);
 
-        tableAluno.setPlaceholder(null);
-
         colRa.setCellValueFactory(new PropertyValueFactory<>("ra"));
 
         colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
@@ -51,6 +50,8 @@ public class DeleteController {
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
 
         tableAluno.getColumns().addAll(colRa, colNome, colTelefone, colEmail);
+
+        tableAluno.setPlaceholder(new Label("Não há alunos para exibir."));
     }
 
     public String formatarTelefone(String telefone) {
