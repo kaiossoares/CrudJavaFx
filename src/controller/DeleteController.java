@@ -49,9 +49,8 @@ public class DeleteController {
 
         colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-        tableAluno.getColumns().addAll(colRa, colNome, colTelefone, colEmail);
-
         tableAluno.setPlaceholder(new Label("Não há alunos para exibir."));
+
     }
 
     public String formatarTelefone(String telefone) {
@@ -72,6 +71,7 @@ public class DeleteController {
     ArrayList<Integer> idCurso = new ArrayList<Integer>();
 
     public void preencherComboBox(ComboBox<String> comboBox) {
+
         comboBox.getItems().clear();
         try {
             MeuResultSet resultado = Cursos.listarCurso();
